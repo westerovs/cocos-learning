@@ -49,7 +49,6 @@ export class DoorBellController extends Component {
 
   #checkCompletion = () => {
     if (this.count === 5) {
-      throw new Error()
       console.log('Счётчик достиг 5!')
       director.loadScene('Level2')
     }
