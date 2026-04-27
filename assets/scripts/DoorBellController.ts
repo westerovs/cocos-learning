@@ -2,6 +2,8 @@ import {_decorator, Component, RichText, AudioSource, director} from 'cc'
 
 const {ccclass, property} = _decorator
 
+let counter = 0
+
 // всё что начинается с собаки, это декораторы!!
 @ccclass('DoorBellController')
 export class DoorBellController extends Component {
@@ -26,6 +28,9 @@ export class DoorBellController extends Component {
       this.#updateCounterText()
       this.#playBell()
       this.#checkCompletion()
+
+      counter++
+      console.info('global', counter)
     }
   }
 
